@@ -17,6 +17,7 @@ NEWSPIDER_MODULE = 'DZhihuSpider.spiders'
 SCHEDULER = "scrapy_redis.scheduler.Scheduler"
 SCHEDULER_PERSIST = True
 
+SCHEDULER_QUEUE_CLASS = "scrapy_redis.queue.SpiderQueue"
 # REDIS_HOST = '10.244.24.60'
 REDIS_PORT = 6379
 
@@ -25,7 +26,7 @@ REDIS_PORT = 6379
 #USER_AGENT = 'ZhihuSpider (+http://www.yourdomain.com)'
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS=64
+CONCURRENT_REQUESTS=128
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay

@@ -12,7 +12,7 @@ import logging
 class ZhihuSpider(RedisMixin, CrawlSpider):
     name = "Zhihu"
     allowed_domains = ['zhihu.com']
-    start_urls = ['http://www.zhihu.com/people/sun-ba-tian/about']
+    start_urls = ['http://www.zhihu.com/people/daniuge/about']
     host = 'http://www.zhihu.com'
 
     def __init__(self):
